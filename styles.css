@@ -1,0 +1,118 @@
+:root{
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'inter';
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);/* define qual fonte ele vai usar no BODY*/
+    font-size: 16px; /* define o tamanho*/
+    font-weight: 400;/* define peso ?*/
+}
+
+*{
+    margin: 0;/*margin modifica o espaçamento de fora do container*/
+    padding: 0;/*padding modifica o espaçamento de dentro do container*/
+}/*retira as margens automaticas o elemento "*" seleciona todos os componentes da aplicação*/
+
+.principal {
+    background-image: url(img/Background.png);
+    background-repeat:no-repeat; /*comando para usando para imagem não se repetir*/
+    background-size: contain; /* background size CONTAIN pega todo o conteiner da imagem*/
+    align-items: center;/* alinha os itens ao centro*/
+    text-align: center; /* alinha todos os elementos do bloco ao centro*/
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; /* divide a aréa da tela em colunas diferentes. quanto mais parametros mais colunas, lembrando no final sempre deve dar 100*/
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px; /* arredondamento de botão */
+    padding: 1em; /*margen do botao*/
+    color: var(--branco-principal); /* deixa a escrita branca */
+    display: block; /* define o local aonde vai ficar ex do programa debaixo da escrita */
+    text-decoration: none; /* retira a decoração do botão, aquele traço abaixo do texto*/
+    margin-bottom: 1em;
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);/* cria a borada da imagem, solid define cor solida */
+}
+
+.aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0; /* cima direita baixo esquerda, sempre ir so sentido horario */
+}
+
+.container__caixa{
+    margin: 0 6em;/* 0 significa topo e embaixo e 6em nas laterais*/
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.secundario{
+    align-items: center; /*centralizando os itens*/
+    margin: 0 10em;
+}
+
+.descricao_titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin: 0.1em;
+}
+
+.botao__terciario{
+    display: inline-block; /* faz com que o botão fique do tamanho da texto/// o INLINE deixa o botao em linha ou seja se outro botao fosse adicionado seria colocado a frente, e o BLOCK faz a quebra de linha, nesse comando a cima estamos utilizando a melhor parte dos dois*/
+    margin-top: 1em; /* espaça o topo do botao na pagina serida o espaçamento entro o texto e o botao*/
+}
+
+.container__descricao{
+    padding: 1em;
+}
+
+.descricao_texto{
+    margin: 0.3em;
+}
+
+.dispositivos__lista{
+    display: flex; /*display flex é um comando usado para deixar todos os itens alinhados em linha///mas também é possível usar o display grid*/
+    justify-content: center; /*centraliza os itens da linha */
+    list-style: none; /*retira os estilos da lista ou seja retira os pontos demarcando cada item da lista º*/
+    margin: 5em 0;
+}
+
+.dispositivos{
+    text-align: center; /*centraliza os textos dos itens*/
+
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--branco-principal);
+}
