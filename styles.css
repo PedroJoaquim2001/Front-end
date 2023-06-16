@@ -4,6 +4,7 @@
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
     --fonte-principal: 'inter';
+    --botao-azul-efeito: #3f91f6;
 }
 
 body{
@@ -41,6 +42,11 @@ body{
     display: block; /* define o local aonde vai ficar ex do programa debaixo da escrita */
     text-decoration: none; /* retira a decoração do botão, aquele traço abaixo do texto*/
     margin-bottom: 1em;
+}
+
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);/*este color muda a cor da fonte*/
 }
 
 .botao_secundario{
@@ -115,4 +121,38 @@ body{
 .lista__item{
     font-size: 32px;
     color: var(--branco-principal);
+}
+
+.rodape{
+    text-align: center;
+    margin-top: 6em;
+    margin-bottom: 5em;
+}
+
+.rodape__lista{
+    display: flex; /*display flex é um comando usado para deixar todos os itens alinhados em linha///mas também é possível usar o display grid*/
+    justify-content: center; /*centraliza os itens da linha */
+    list-style: none; /*retira os estilos da lista ou seja retira os pontos demarcando cada item da lista º*/
+    margin: 3em 0 2em 0;
+}
+
+.lista__link{
+    color: var(--cinza-secundario);
+}
+
+.texto__rodape{
+    color: var(--cinza-secundario);
+    margin: 0 9em;
+}
+
+.texto__lista__link{
+    color: var(--branco-principal);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 1.5em;
+}
+
+.texto__lista__link:hover{ /* hover é o estado que o link fica quando se passa o mouse por cima*/
+    color: var(--botao-azul);
 }
